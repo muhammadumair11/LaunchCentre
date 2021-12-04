@@ -76,63 +76,6 @@ button:focus {
   border-radius: 100px;
 }
 
-.card {
-  background-color: transparent;
-  border: none;
-}
-
-.card .card-header {
-  padding: 0;
-  background-color: transparent;
-}
-
-.card .card-header {
-  position: relative;
-}
-
-.card .card-header .hidden {
-  opacity: 0;
-  transition: all 500ms ease-out;
-}
-
-.card .card-header .hidden img {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.card .card-header .hidden .text {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 0.6rem 0;
-  text-align: center;
-  font-size: 0.8rem;
-  background-color: rgba(255, 255, 255, 0.795);
-}
-
-.card .card-header .hidden:hover {
-  opacity: 1;
-}
-
-.card .card-body {
-  text-align: center;
-  font-size: 0.7rem;
-  color: #727272;
-  text-transform: uppercase;
-}
-
-.card .card-body a {
-  font-size: inherit;
-  font-weight: normal;
-  color: inherit;
-  text-decoration: none;
-}
-
-.card .card-body p span.cross-sale {
-  text-decoration: line-through;
-}
-
 ul {
   font-size: 0.7rem;
 }
@@ -420,6 +363,8 @@ footer .secondary-footer-row ul:last-child li a {
 .profile .cover-image {
   height: clamp(250px, 40vw, 500px);
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .profile-info {
