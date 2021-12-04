@@ -1,0 +1,64 @@
+button {
+	font-size: 0.8em;
+	transition: all 500ms;
+	min-width: 70px;
+	padding: .5rem 1rem;
+	border: none;
+	
+	&:focus {
+		outline: none;
+	}
+}
+
+.empty-btn {
+	background-color: transparent;
+	color: #000 !important;
+
+	border: 1px solid black;
+
+	&:hover {
+		background-color: #000 !important;
+		color: white !important;
+	}
+}
+
+.filled-btn {
+	background-color: white !important;
+	color: $primary-color !important;
+	
+	border: 1px solid black;
+	
+	&:hover {
+		background-color: $primary-color !important;
+		color: white !important;
+	}
+}
+.filled-primary-btn {
+	background-color: $primary-color !important;
+	color: white !important;
+
+	border: 1px solid $primary-color;
+
+	&:hover {
+		background-color: white !important;
+		color: $primary-color !important;
+	}
+}
+.filled-secondary-btn {
+	background-color: $secondary-color !important;
+	color: white !important;
+
+	border: 1px solid $secondary-color;
+
+	&:hover {
+		background-color: white !important;
+		color: $secondary-color !important;
+	}
+}
+
+.rounded-btn {
+	border-radius: 10px;
+}
+.rounded-pill-btn {
+	border-radius: 100px;
+}

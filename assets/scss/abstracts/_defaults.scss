@@ -1,0 +1,16 @@
+body {
+	font-family: $font-regular !important;
+
+	position: relative;
+}
+
+
+a {
+	text-decoration: none;
+
+	&:hover {
+				color: rgba(255, 255, 255, 0.604);
+	}
+}
+
+

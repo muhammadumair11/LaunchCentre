@@ -1,0 +1,137 @@
+// Profile Section
+.profile {
+
+	font-family: $font-family;
+
+	.cover-image {
+		height: clamp(250px , 40vw, 500px);
+		background-position: center;
+	}
+
+	&-info {
+		background-color: #E5E5E5;
+		position: relative;
+		top: -150px;
+		border-radius: 20px;
+
+		.buttons {
+			button {
+				padding: .5rem 2rem;
+				margin: 10px 0;
+
+				@media (max-width: 425px) {
+					width: 100%;
+				}
+			}
+		}
+	}
+	&-image {
+		max-width: 300px;
+		border-radius: 20px;
+	}	
+
+	&-list {
+		ul {
+			li {
+				padding: 1.5rem 0;
+				a {
+					color: black;
+					font-size: .8rem;
+					font-weight: $font-semibold;
+				}
+			}
+		}
+
+		@media (max-width: 768px) {
+			ul {
+				justify-content: flex-start;
+				align-items: flex-start;
+				overflow-x: scroll;
+				li {
+					padding: 1rem 3rem !important;
+					
+					a {
+						@include flex(flex-start);
+
+						span {
+							padding: 0 1rem;
+						}
+					}
+
+				}
+			}
+		}
+	}
+
+	&-name {
+		h1 {
+			a {
+				font-size: 1.5rem;
+			}
+		}
+	}
+	&-stats {
+		.stat {
+			&-numbers {
+				border-radius: 20px;
+				border: 2px solid #B5B5B5;
+				padding: 1.5rem 2rem;
+				font-size: 1.3rem;
+				text-align: center;
+				font-weight: $font-semibold
+			}
+		}
+	}
+
+
+	// Products
+
+	.products {
+		.title {
+			a {
+				font-size: .9rem;
+				color: $primary-color;
+				text-decoration: underline;
+			}
+		}
+	}
+	.search-input {
+		.search-background {
+			@include flex(flex-start);
+			background-color: #c4c4c488;
+			border-radius: 10px;
+			width: clamp(80%, 90vw, 100%);
+			
+			input {
+				border: none;
+				background-color: transparent;
+				margin: 0 20px;
+				width: 100%;
+
+				&:focus {
+					outline: none;
+				}
+
+				&::placeholder {
+					font-size: .8rem;
+					font-weight: $font-semibold;
+					color: rgba(0, 0, 0, 0.871);
+				}
+			}
+		}
+		button {
+			padding: .7rem 2.5rem;
+		}
+	}
+
+	.product-items {
+		font-family: $font-family;
+		&-item {
+			img {
+				border-radius: 20px;
+			}
+		}
+	}
+}
+
+

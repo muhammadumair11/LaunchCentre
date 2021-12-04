@@ -1,0 +1,160 @@
+header {
+    background-color: $primary-color;
+    .navbar-items {
+
+        .navbar-groups {
+            margin: 0;
+            padding: 0;
+
+            li {
+                font-size: .8rem;
+                font-family: $font-regular;
+                font-weight: $font-meduim;
+                a {
+                    color: white;
+                    span {
+                        padding: 0 1rem;
+                    }
+                }
+            }
+
+            // Navbar Group First Child Unordered List
+            &:first-child {
+                li {
+                    padding: 1.5rem 1.6rem;
+
+                    &.active {
+                        background-color: white;
+                        a {
+                            color: black;
+
+                            img {
+                                filter: invert(1);
+                            }
+                        }
+                    }
+                }
+            }
+            // Navbar Group Second Child Unordered List
+            &:last-child {
+                li {
+                    padding: 1rem;
+                    button.dropdown-toggle {
+                        background-color: transparent;
+                        color: white;
+                        font-weight: $font-semibold;
+                    }
+
+                    .dropdown-menu {
+                        li {
+                            padding: .2rem 1rem;
+                            a {
+                                color: black;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    &.desktop-navbar {
+        .navbar-items {
+            @include flex(space-between,center);
+            flex-wrap: wrap;
+    
+            border-radius: 0 0 15px 15px ;
+
+            .navbar-groups {
+                @include flex();
+                flex-wrap: wrap;
+
+                &:first-child {
+                    li {
+                        &:first-child {
+                            background-color: white;
+                            border-radius: 0 0 0 15px;
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+
+    &.mobile-navbar {
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        z-index: 5;
+        left: -100%;
+        transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+        @include flex(flex-start,center);
+
+
+        &.active {
+            left: 0;
+        }
+
+        .navbar-items {
+            @include flex(space-between,flex-start,column);
+            flex-wrap: wrap;
+    
+            
+    
+            .navbar-groups {
+                &:first-child {
+                    @include flex(flex-start,flex-start,column);
+                    flex-wrap: wrap;
+                }
+                
+                &:last-child {
+                    @include flex(flex-start,center,row);
+                    flex-wrap: wrap;
+                }
+                
+            }
+        }
+    }
+
+    &.mobile-logo {
+        @include flex(space-between);
+        position: fixed;
+        width: 100%;
+        img {
+            width: 100px;
+            filter: invert(1);
+        }
+
+        .hamburgur {
+            @include flex(center,center,column);
+            span {
+                display: inline-block;
+                width: 20px;
+                height: 1px;
+                margin: 3px 0;
+                background-color: white;
+
+                transition: all 500ms ease-in-out;
+                transform-origin: left center;
+            }
+
+            &.active {
+                span {
+                    &:first-child {
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &:last-child {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}
